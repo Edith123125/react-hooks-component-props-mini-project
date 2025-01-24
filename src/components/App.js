@@ -1,4 +1,4 @@
-// src/components/App.js
+
 import React from 'react';
 import About from './About';
 import ArticleList from './ArticleList';
@@ -32,7 +32,7 @@ const App = () => {
   };
 
   return (
-    <div className="App"> {/* Added "App" class here */}
+    <div className="App"> {}
       <Header name={aboutData.name} />
       <About image={aboutData.image} name={aboutData.name} about={aboutData.about} />
       <ArticleList posts={posts} />

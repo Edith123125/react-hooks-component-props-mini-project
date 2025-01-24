@@ -1,10 +1,10 @@
-// src/components/ArticleList.js
+
 import React from 'react';
 import Article from './Article';
 
 const ArticleList = ({ posts }) => {
   return (
-    <main className="article-list"> {/* Added a <main> element here */}
+    <main className="article-list"> {}
       {posts.map((post) => (
         <Article 
           key={post.id}

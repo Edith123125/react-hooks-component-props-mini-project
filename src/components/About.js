@@ -1,10 +1,10 @@
-// src/components/About.js
 import React from 'react';
 
 const About = ({ image, name, about }) => {
-  const defaultImage = "https://via.placeholder.com/215"; // Default image URL
-  const imgSrc = image || defaultImage; // Use the passed `image` prop or the default image
+  const defaultImage = "https://via.placeholder.com/215"; 
+  const imgSrc = image || defaultImage; 
 
+  console.log("Image source: ", imgSrc); 
   return (
     <aside className="about">
       <h1>{name}</h1>
