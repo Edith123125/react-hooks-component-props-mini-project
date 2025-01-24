@@ -1,25 +1,16 @@
-import React from "react";
 
-function Article({ title, date = "January 1, 1970", preview, minutes }) {
-  const displayReadingTime = () => {
-    if (minutes < 30) {
-      const cups = Math.ceil(minutes / 5);
-      return "☕️".repeat(cups);
-    } else {
-      const boxes = Math.ceil(minutes / 10);
-      return "🍱".repeat(boxes);
-    }
-  };
 
+
+import React from 'react';
+
+const Article = ({ title, date = "January 1, 1970", preview }) => {
   return (
-    <article>
-      <h3>{title}</h3>
-      <small>
-        {displayReadingTime()} {minutes} min read
-      </small>
+    <article className="article">
+      <h3>{title}</h3> {}
+      <small>{date}</small>
       <p>{preview}</p>
     </article>
   );
-}
+};
 
 export default Article;

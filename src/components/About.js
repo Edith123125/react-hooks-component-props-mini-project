@@ -1,12 +1,17 @@
-import React from "react";
+// src/components/About.js
+import React from 'react';
 
-function About({ image = "https://via.placeholder.com/215", about }) {
+const About = ({ image, name, about }) => {
+  const defaultImage = "https://via.placeholder.com/215"; // Default image URL
+  const imgSrc = image || defaultImage; // Use the passed `image` prop or the default image
+
   return (
-    <aside>
-      <img src={image} alt="blog logo" />
+    <aside className="about">
+      <h1>{name}</h1>
+      <img src={imgSrc} alt="blog logo" />
       <p>{about}</p>
     </aside>
   );
-}
+};
 
 export default About;

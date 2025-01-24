@@ -1,20 +1,20 @@
-import React from "react";
-import Article from "./Article";
+// src/components/ArticleList.js
+import React from 'react';
+import Article from './Article';
 
-function ArticleList({ posts }) {
+const ArticleList = ({ posts }) => {
   return (
-    <main>
+    <main className="article-list"> {/* Added a <main> element here */}
       {posts.map((post) => (
-        <Article
+        <Article 
           key={post.id}
           title={post.title}
           date={post.date}
           preview={post.preview}
-          minutes={post.minutes}
         />
       ))}
     </main>
   );
-}
+};
 
 export default ArticleList;
